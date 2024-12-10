@@ -1,0 +1,107 @@
+echo "Hello, Git" | git hash-object --stdin ----> "--std" to take the out put from privice command
+
+echo "Hello, Git" | git hash-object --stdin == echo -e "blob 11\0Hello, Git" | shasum
+
+git config --global core.editor "code --wait"
+
+git config --global --unset core.editor
+
+git config --global color.ui auto
+
+
+                    "start with git"
+
+git init  --> create git repo
+
+git status --> see the status of working directory
+   \ status -s --> see sammary for the status of working directory
+
+git ls-files --> to see what in the index file
+   \ ls-files -s --> to see what in the index file and the create mode,sha1,staging state,name
+
+find .git/object/ -type f --> to see the file on the git repo
+
+git add * --> to add all file to staging area(index)
+
+
+git cat-file -t 'sha1' --> to see the type of the object(sha1)
+git cat-file -s 'sha1' --> to see the size of the object(sha1)
+git cat-file -p 'sha1' --> to see the content of the object(sha1)
+
+git log --> to see the history of what commited in git repo
+   \ log --oneline -> to see the history of what commited in git repo in one line
+      \ git log --oneline --graph
+
+git diff --> see the diff between the working tree and the index
+   \ diff --staged --> see the diff between the repo and the index
+            \ any opreation between the repo and the index we add --staged
+
+git diff --> diﬀ of what is changed but not staged
+   \ diff --staged --> diﬀ of what is staged but not yet committed
+
+git show 'object'
+   \ 
+    \ git show --> see the diff between two objects
+
+
+--------------------------------------------------------
+git rm --cached <objects> --> remove from staging area
+
+git restore <files> --> if you make changes and wanna restore but you didn't add this files to index 
+
+git restore --staged <file> --> if you make changes and wanna restore but you add this files to index then use 'git restore <files>'
+
+git commit --amend --> to modifi last commit 
+
+---------------------------------------------------------------
+git tag -a <version> -m "msg"
+
+git show <version>
+
+git branch <branch_name> --> create new branch
+
+git branch --> see the branch we have 
+
+git switch <branch> --> change the branch 
+
+git merge <branch> --> merge the current branch with the selected branch
+
+git branch --merged --> see the branch that we merged with master
+
+git branch -d <branch> --> delete the branch
+
+--------------------------------------------------------------
+git remote -v
+
+git branch -v
+
+git branch -vv
+
+Aborting commit due to empty commit message.
+git status
+git add 
+git log
+git ls-files
+git cat-file -tsp
+git commit -m "Initial commit"
+find .git/objects/ -type f
+ 
+git show
+
+git cat-file -t 1051;git cat-file -s 1051;git cat-file -p 1051
+
+
+
+-------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=5Xji4Y60zDo
+
+sudo apt update
+
+sudo apt install gnome-tweaks
+
+mkdir ~/.local/share/gnome-shell/extensions
+
+gnome-shell --version
+
+gnome-extensions enable clipboard-indicator@tudmotu.com
